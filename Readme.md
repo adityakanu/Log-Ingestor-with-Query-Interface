@@ -1,4 +1,4 @@
-# Log Viewer and Ingestor
+# Log Ingestor and Query Interface
 
 This project is a simple log management system with a frontend for log ingestion and a backend for querying and displaying logs.
 
