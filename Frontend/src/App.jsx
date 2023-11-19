@@ -1,17 +1,33 @@
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-
-import LogIngestForm from './components/LogIngestForm';
-import LogList from './components/LogList';
-
-function App() {
+import { Link } from "react-router-dom";
+import dataImg from "./assets/data.svg";
+const App = () => {
   return (
-    <Router>
-        <Switch>
-          <Route path="/logs" component={LogList} />
-          <Route path="/ingest" component={LogIngestForm} />
-        </Switch>
-    </Router>
-  );
+    <div className="py-10 m-auto md:flex">
+      <div className="px-12 mx-3 my-auto ">
+        <h1 className="py-5 mb-6 text-3xl font-bold md:text-6xl font-yanone">Log Ingestor with Query Interface</h1>
+        <p className="mb-4 text-sm md:text-lg">
+          This application allows you to view logs and ingest new log entries. Click on the buttons below to get started:
+        </p>
+        <div className="flex space-x-4">
+          <Link to="/logs">
+            <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+              Log Query
+            </button>
+          </Link>
+          <Link to="/ingest">
+            <button className="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline">
+              Log Ingest
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div>
+        <img src={dataImg} alt="" className="my-auto" />
+      </div>
+    </div>
+  );   
 }
+
+
 
 export default App;
