@@ -18,8 +18,8 @@ This project is a simple log management system with a frontend for log ingestion
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/log-viewer-and-ingestor.git
-   cd log-viewer-and-ingestor
+   git clone https://github.com/adityakanu/Log-Ingestor-with-Query-Interface.git
+   cd Log-Ingestor-with-Query-Interface
     ```
 
 2. **Install dependencies:**
@@ -36,8 +36,7 @@ This project is a simple log management system with a frontend for log ingestion
 
     Create a .env file in the backend directory and add the MongoDB connection string:
 
-    ```
-    env
+    ```env
 
     MONGODB_URI=your-mongodb-connection-string
     ```
@@ -85,6 +84,5 @@ The log ingestion feature allows you to submit logs to the backend. Navigate to 
 
 The log query interface (/logs) enables you to search and filter logs based on various criteria such as log level, message, resource ID, timestamp, and more. Select a property, enter a value, and click "Query Logs" to view the filtered logs in a tabular format.
 
-Feel free to explore and enhance the project based on your requirements!
+#### Feel free to explore and enhance the project based on your requirements!
 
-- Make sure to replace placeholders like `your-username` and `your-mongodb-connection-string` with your actual information. Customize the sections and content based on the specifics of your project.
