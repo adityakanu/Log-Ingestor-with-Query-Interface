@@ -15,12 +15,12 @@ function LogIngestForm() {
         },
     });
     const handleInsertPresentTime = () => {
-        // Create a new Date object to get the current time
         const currentTime = new Date().toISOString();
-        // Update the timestamp field in the form data
         setFormData((prevData) => ({ ...prevData, timestamp: currentTime }));
     };
+
     const handleInputChange = (e) => {
+        console.log(e.target.name);
         setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
     };
 
@@ -28,8 +28,9 @@ function LogIngestForm() {
         e.preventDefault();
         try {
         await axios.post('http://localhost:3000/', formData);
-        // Optionally, clear the form after submission
-        setFormData({ level: '', message: '', resourceId: '' , timestamp: '', traceId: '', spanId: '', commit: '', metadata: { parentResourceId: '' } });
+        
+        setFormData({ level: '', message: '', resourceId: '' , timestamp: '', traceId: '', spanId: '', commit: '', parentResourceId: ''});
+        console.log('Log ingested successfully!');
         } catch (error) {
         console.error('Error ingesting log:', error);
         }
@@ -149,13 +150,13 @@ function LogIngestForm() {
             </div>
             <div className="mb-4">
                 <label className="block mb-2 font-bold text-gray-700" htmlFor="metadata">
-                Metadata
+                Metadata: parentResourceId
                 </label>
                 <input
                 className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                 id="metadata"
                 type="text"
-                name="metadata"
+                name="parentResourceId"
                 value={formData.parentResourceId}
                 onChange={handleInputChange}
                 />

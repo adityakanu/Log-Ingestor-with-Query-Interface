@@ -1,6 +1,5 @@
-// src/components/LogList.jsx
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function LogList() {
     const [logs, setLogs] = useState([]);
@@ -9,16 +8,11 @@ function LogList() {
         value: '',
     });
 
-    useEffect(() => {
-        if (query.property && query.value) {
-        fetchLogs();
-        }
-    }, [setQuery]);
-
-    const fetchLogs = async () => {
+    const fetchLogs = async (property, value) => {
         try {
-        const response = await axios.get('http://localhost:3000/api/logs', { params: query });
-        setLogs(response.data);
+            const response = await axios.get('http://localhost:3000/api/logs', {
+                params: { [property]: value }, });
+            setLogs(response.data);
         console.log(response.data);
         } catch (error) {
         console.error('Error fetching logs:', error);
@@ -32,7 +26,7 @@ function LogList() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (query.property && query.value) {
-        fetchLogs();
+        fetchLogs(query.property, query.value);
         }
     };
 
@@ -79,12 +73,10 @@ function LogList() {
             </div>
 
             <div>
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="value">
-                Enter Value:
-                </label>
                 <button
                 type="submit"
-                className="px-4 py-2 mt-4 font-bold text-white bg-blue-500 rounded items-bottom hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                // onClick={fetchLogs}
+                className="px-5 py-2 font-bold text-white bg-blue-500 rounded mt-7 items-bottom hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                 >
                 Query Logs
                 </button>

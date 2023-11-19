@@ -2,6 +2,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
+import { DB_NAME } from './constant.js';
+import connectDB from './db/index.js';
 import Log from './models/logs.model.js';
 const app = express();
 app.use(cors({
@@ -37,47 +39,9 @@ app.post('/', async (req, res) => {
 
 app.get('/api/logs', async (req, res) => {
     try {
-        let query = {};
-    
-        if (req.query.level) {
-            query.level = req.query.level;
-        }
-    
-        if (req.query.message) {
-            query.message = { $regex: req.query.message, $options: 'i' };
-        }
-    
-        if (req.query.resourceId) {
-            query.resourceId = req.query.resourceId;
-        }
-    
-        if (req.query.timestampStart && req.query.timestampEnd) {
-            query.timestamp = {
-            $gte: new Date(req.query.timestampStart),
-            $lte: new Date(req.query.timestampEnd),
-            };
-        }
-    
-        // Add criteria for other properties
-        if (req.query.traceId) {
-            query.traceId = req.query.traceId;
-        }
-    
-        if (req.query.spanId) {
-            query.spanId = req.query.spanId;
-        }
-    
-        if (req.query.commit) {
-            query.commit = req.query.commit;
-        }
-    
-        if (req.query['metadata.parentResourceId']) {
-            query['metadata.parentResourceId'] = req.query['metadata.parentResourceId'];
-        }
-    
-        // Fetch logs based on the constructed query
-        const logs = await Log.find(query);
-    
+        console.log(req.query);
+        const logs = await Log.find(req.query);
+        console.log(logs);
         res.json(logs);
     } catch (error) {
         console.error('Error fetching logs:', error);
