@@ -35,8 +35,7 @@ const logSchema = new mongoose.Schema({
     },
     metadata: {
         parentResourceId: {
-            type: String,
-            required: true,
+        type: String,
         },
     },
 });
