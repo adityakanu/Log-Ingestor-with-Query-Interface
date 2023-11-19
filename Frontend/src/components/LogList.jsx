@@ -13,7 +13,6 @@ function LogList() {
             const response = await axios.get('http://localhost:3000/api/logs', {
                 params: { [property]: value }, });
             setLogs(response.data);
-        console.log(response.data);
         } catch (error) {
         console.error('Error fetching logs:', error);
         }
@@ -31,7 +30,7 @@ function LogList() {
     };
 
     return (
-        <div className="px-5 py-32">
+        <div className="px-32 py-32 mx-auto">
         <h1 className="mb-4 text-3xl font-bold">Log Query Interface</h1>
         <form onSubmit={handleFormSubmit} className="mb-4">
             <div className="flex space-x-4">
