@@ -27,7 +27,7 @@ function LogIngestForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-        await axios.post('http://localhost:3000/api/logs', formData);
+        await axios.post('http://localhost:3000/', formData);
         // Optionally, clear the form after submission
         setFormData({ level: '', message: '', resourceId: '' , timestamp: '', traceId: '', spanId: '', commit: '', metadata: { parentResourceId: '' } });
         } catch (error) {
