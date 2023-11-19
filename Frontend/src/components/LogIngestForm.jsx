@@ -20,7 +20,7 @@ function LogIngestForm() {
     };
 
     const handleInputChange = (e) => {
-        console.log(e.target.name);
+        // console.log(e.target.name);
         setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
     };
 
