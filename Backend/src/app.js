@@ -2,17 +2,14 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
-import { DB_NAME } from './constant.js';
-import connectDB from './db/index.js';
 import Log from './models/logs.model.js';
 const app = express();
 app.use(cors({
-    origin: "process.env.CORS_ORIGIN",
+    origin: "*",
     credentials: true
 }));
 
 
-// the public with temp folder in it
 app.use(express.static("public"));
 
 app.use(bodyParser.json());
@@ -39,9 +36,9 @@ app.post('/', async (req, res) => {
 
 app.get('/api/logs', async (req, res) => {
     try {
-        console.log(req.query);
-        const logs = await Log.find(req.query);
-        console.log(logs);
+        let query = {};
+        query = req.query;
+        const logs = await Log.find(query);
         res.json(logs);
     } catch (error) {
         console.error('Error fetching logs:', error);
