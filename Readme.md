@@ -6,7 +6,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Log Ingestor with Query Interface</h3>
+  <h3 align="center">Issue Tracker and Log Ingestor</h3>
 
   <p align="center">
     <br />
@@ -63,7 +63,7 @@ The project is structured into two main parts: the backend (Express server) and 
 
 The log ingestion feature allows you to submit logs to the backend. Navigate to the log ingestion page (/ingest), fill in the log details, and submit the form.
 
-### Log Query Interface
+### Issue Query Interface
 
 The log query interface (/logs) enables you to search and filter logs based on various criteria such as log level, message, resource ID, timestamp, and more. Select a property, enter a value, and click "Query Logs" to view the filtered logs in a tabular format.
 
