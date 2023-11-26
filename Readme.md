@@ -79,7 +79,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 
 * [![React][React.js]][React-url]
-* [![Express][express.js]][Express-url]
+* [![Express.JS][express.js]][Express-url]
 * [![MongoDB][mongodb.com]][MongoDB-url]
 
 
@@ -207,7 +207,9 @@ Your Name - [@adityakanu_](https://twitter.com/adityakanu_) - official.adityakan
 [license-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/adityakanu/
-[Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=expressdotjs&logoColor=white
+[Express.js]: https://img.shields.io/badge/express-000000?style=for-the-badge&logo=expressdotjs&logoColor=white
 [Express-url]: https://expressjs.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[mongodb.com]: https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=61DAFB
+[MongoDB-url]: https://mongodb.com/
