@@ -1,4 +1,7 @@
-
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -75,12 +78,9 @@ The log query interface (/logs) enables you to search and filter logs based on v
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 
-* React
-* NodeJS
-* Javascript
-* Express
-* MongoDB
-
+* [![React][React.js]][React-url]
+* [![Express][express.js]][Express-url]
+* [![MongoDB][mongodb.com]][MongoDB-url]
 
 
 <!-- GETTING STARTED -->
@@ -149,6 +149,17 @@ This project is a simple log management system with a front-end for logging inge
 - You can use the Log Ingestor to insert logs or directly send Logs to <http://localhost:3000>.
 - The Logs can be viewed in the query interface.
 
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Add query using multiple filters
+- [ ] Query issues between dates
+- [ ] Role-wise issue management
+- [ ] Export of filtered data into CSV
+
+
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -178,7 +189,25 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@adityakanu_](https://twitter.com/adityakanu_) - official.adityakanu@gmail.com
 
-Project Link: https://github.com/dyte-submissions/november-2023-hiring-adityakanu
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/adityakanu/Log-Ingestor-with-Query-Interface.svg?style=for-the-badge
+[contributors-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/adityakanu/Log-Ingestor-with-Query-Interface.svg?style=for-the-badge
+[forks-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/network/members
+[stars-shield]: https://img.shields.io/github/stars/adityakanu/Log-Ingestor-with-Query-Interface.svg?style=for-the-badge
+[stars-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/stargazers
+[issues-shield]: https://img.shields.io/github/issues/adityakanu/Log-Ingestor-with-Query-Interface.svg?style=for-the-badge
+[issues-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/issues
+[license-shield]: https://img.shields.io/github/license/adityakanu/Log-Ingestor-with-Query-Interface.svg?style=for-the-badge
+[license-url]: https://github.com/adityakanu/Log-Ingestor-with-Query-Interface/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/adityakanu/
+[Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=expressdotjs&logoColor=white
+[Express-url]: https://expressjs.com/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
