@@ -34,21 +34,17 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#load-testing">Performance</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -64,23 +60,29 @@ The project is structured into two main parts: the backend (Express server) and 
 
 ### Log Ingestion
 
-The log ingestion feature allows you to submit logs to the backend. Navigate to the log ingestion page (/ingest), fill in the log details, and submit the form.
+The log ingestion feature allows you to submit logs to the backend. You can navigate to the log ingestion page (/ingest), fill in the log details, and submit the form.
 
 ### Issue Query Interface
 
-The log query interface (/logs) enables you to search and filter logs based on various criteria such as log level, message, resource ID, timestamp, and more. Select a property, enter a value, and click "Query Logs" to view the filtered logs in a tabular format.
+The log query interface (/logs) enables you to search and filter logs based on criteria such as log level, message, resource ID, timestamp, and more. Select a property, enter a value, and click "Query Logs" to view the filtered logs in a tabular format.
 
 
 
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
+These are the major technologies used to build the software
 
 * [![React][React.js]][React-url]
 * [![Express.JS][express.js]][Express-url]
 * [![MongoDB][mongodb.com]][MongoDB-url]
+
+### Load Testing
+
+Here's the report of a Load Test with 100 Virtual Users for 1 min:
+
+[![Screenshot-from-2023-12-01-14-45-10.png](https://i.postimg.cc/zBWT288s/Screenshot-from-2023-12-01-14-45-10.png)](https://postimg.cc/sQjBvFBm)
+
 
 
 <!-- GETTING STARTED -->
